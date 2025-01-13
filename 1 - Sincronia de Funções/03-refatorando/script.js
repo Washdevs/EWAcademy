@@ -9,6 +9,9 @@
 // se der erro vem no estado rejected (Erro) e nós capturamos com try cat por exemplo.
 
 function obterUsuario(callback) {
+    //quando der algum problema -> reject(ERRO)
+    //quando for sucesso -> resolve
+    return new Promise(function resolvePromise(resolve, reject){
     setTimeout(() => {
         return callback (null, {
             id: 1,
@@ -16,7 +19,8 @@ function obterUsuario(callback) {
             dataNascimento: new Date()
         })
     }, 1000)
-}
+})}
+
 
 function obterTelefone(idUsuario, callback) {
     setTimeout(() => {

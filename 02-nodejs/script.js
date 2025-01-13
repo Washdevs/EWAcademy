@@ -33,10 +33,6 @@ function obterEndereco(idUsuario, callback) {
     }, 3000)
 }
 
-function resolverUsuario(erro, usuario){
-    console.log('usuario', usuario);
-}
-
 obterUsuario(function resolverUsuario(error, usuario){
     if(error){
         console.error('Deu ruim', error);
